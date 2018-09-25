@@ -1,0 +1,42 @@
+#header{
+    width: 100%;    
+}
+#header ul{
+    height: 25px;
+    background-color:lightgray;
+    position:fixed;    
+}
+#header ul li{
+    float: left;
+    margin: 0;
+    height: 25px;
+    line-height: 25px;
+}
+#header ul li a:hover{ 
+    background-color: bisque;
+    text-decoration: none;
+    color: black
+}
+#body{  
+  width: 100%;
+}
+#body ul{
+    height: 25px;
+    background-color:lightgray
+}
+#body ul li{
+    float: left;
+    margin: 0;
+    height: 25px;
+    line-height: 25px;
+}
+#body ul li a:hover{ 
+    background-color: bisque;
+    text-decoration: none;
+    color: black
+}
+#body .Conent{    
+    height: 600px;
+}
+
+
