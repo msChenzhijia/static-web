@@ -10,37 +10,13 @@
     <link rel="stylesheet" href="css/base.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/index.css">
-    <script>
-        $(function(){
-            var vm1=new Vue({
-               el:'#body',
-               data:{
-                   sites:[
-                       {key:1,name:'主页',url:'#'},
-                       {key:2,name:'JAVA',url:'#'},
-                       {key:3,name:'ASP.NET',url:'#'}                       
-                   ]
-               }
-            });
-            var vm2=new Vue({
-                el:"#header",
-                data:{
-                    sites:[
-                       {key:1,name:'个人简历',url:'#'},
-                       {key:2,name:'登陆',url:'#'},
-                       {key:3,name:'关于',url:'#'}                       
-                   ]
-                }
-            });
-            $("#body")
-        })
-    </script>
+    <script src="js/index.js"></script>
 </head>
 <body>
     <div id="box">
         <!-- 头部 -->
         <div id="header">
-            <ul class="col-md-12">              
+            <ul class="col-md-12 navul">              
                 <li v-for="site in sites" class="col-md-3 text-center">
                     <a href="#" class="col-md-12">{{site.name}}</a>
                 </li>
@@ -53,19 +29,27 @@
                             </div>
                             <button type="submit" class="btn btn-primary btn-xs" style="margin-top:-2px;">搜索</button>
                         </div>
-                      
                     </form>
                 </li>
             </ul>
             <div class="imgBox">
-               <img src="img/1537853773(1).jpg" alt="" class="img-rounded">
+                <ul class="imgul">
+                    <li v-for=" item in sites1">
+                        <img :src=item.url alt="" >
+                    </li>
+                </ul>
             </div>
+            <div class="ulNum">
+                <ul></ul>
+            </div>
+            <div class="left">&lt;</div>
+            <div class="right">></div>
         </div>        
         <!-- 身体 -->
         <div id="body">
            <ul class="col-md-12">
-               <li v-for="site in sites" class="col-md-4 text-center">
-                   <a href="#" class="col-md-12">{{site.name}}</a>
+               <li v-for="site in sites" class="col-md-2 text-center">
+                   <a :href=site.url class="col-md-12">{{site.name}}</a>
                </li>
            </ul>
            <div class="Conent container-fluid">
