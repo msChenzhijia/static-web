@@ -1,1 +1,1 @@
-# static-web
+使用Vue.js jq bootstrap
