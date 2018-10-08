@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/base.css"/>
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <script src="js/index.js"></script>
 </head>
 <body>
@@ -17,11 +18,11 @@
         <!-- 头部 -->
         <div id="header">
             <ul class="col-md-12 navul">              
-                <li v-for="site in sites" class="col-md-3 text-center">
+                <li v-for="site in sites" class="col-md-1 col-xs-12 text-center">
                     <a href="#" class="col-md-12">{{site.name}}</a>
                 </li>
-                <li class="col-md-3 text-center">
-                    <form class="form-inline">
+                <li class="col-md-2 col-xs-12 text-center hidden-xs ">
+                    <form class="form-inline col-md-12 col-xs-12">
                         <div class="from-group">
                             <label for="seach" style="color:black" class="sr-only">搜索</label>
                             <div class="input-group">
@@ -35,7 +36,7 @@
             <div class="imgBox">
                 <ul class="imgul">
                     <li v-for=" item in sites1">
-                        <img :src=item.url alt="" >
+                        <img :src=item.url alt="" class="img-rounded" >
                     </li>
                 </ul>
             </div>
@@ -47,14 +48,26 @@
         </div>        
         <!-- 身体 -->
         <div id="body">
-           <ul class="col-md-12">
-               <li v-for="site in sites" class="col-md-2 text-center">
-                   <a :href=site.url class="col-md-12">{{site.name}}</a>
-               </li>
-           </ul>
-           <div class="Conent container-fluid">
-
-           </div>
+           <div class="ContentBox col-md-8" v-for="site in sites1">
+                <div class="Conent container-fluid col-md-12" >
+                   <h3><a href="#" class="col-md-12">{{site.title}}</a> </h3>
+                      <div class="imgdiv col-md-4" >
+                         <img :src=site.url alt="">
+                      </div>
+                      <div class="rightDiv col-md-8"> 
+                      <div class="ContentDiv">
+                            {{site.content}}
+                      </div>
+                      <div class="ContentFooter">
+                          <span class="outspan"><span class="fa  fa-navicon"></span>图片展示</span>
+                          <span class="outspan"><span class="fa  fa-clock-o">2018-07-16</span>
+                          <span class="outspan"><span class="fa fa-eye"></span>2已阅读</span>
+                          <span class="outspan"><span class="fa fa-heart-o"></span></span>
+                      </div>
+                    </div>
+                     
+                </div>
+            </div>
         </div>
         <!-- 脚部 -->
         <div class="footer">
