@@ -48,7 +48,7 @@
         </div>        
         <!-- 身体 -->
         <div id="body">
-           <div class="ContentBox col-md-8" v-for="site in sites1">
+           <div class="ContentBox col-md-7" v-for="site in sites1">
                 <div class="Conent container-fluid col-md-12" >
                    <h3><a href="#" class="col-md-12">{{site.title}}</a> </h3>
                       <div class="imgdiv col-md-4" >
@@ -65,13 +65,19 @@
                           <span class="outspan"><span class="fa fa-heart-o"></span></span>
                       </div>
                     </div>
-                     
+                </div>
+               
+            </div>
+            <div class="ContentRight col-md-5">
+                <div  class=" title">最新</div>
+                <div class="ContentBoxRight col-md-12" v-for="site in sites2">
+                    <img :src="site.url" alt="" class="">
                 </div>
             </div>
         </div>
         <!-- 脚部 -->
-        <div class="footer">
-
+        <div id="footer">
+            2018-10-18-2018-10-18
         </div>
     </div>
      
