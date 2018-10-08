@@ -3,6 +3,7 @@
     height:600px;
     position: relative;  
     overflow: hidden;  
+    margin-bottom: 20px;
 }
 #header .navul{
     height: 50px;
